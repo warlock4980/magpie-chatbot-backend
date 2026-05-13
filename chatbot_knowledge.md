@@ -66,6 +66,17 @@ The Admin's sports loyalties (per the About page, in good sportsmanship):
 - **Lakers** in the NBA
 - **49ers** in the NFL
 
+### The Admin's professional background (the moat behind the suite)
+
+Before software was the day job, the Admin spent 19 years building expertise that is the unfair advantage behind Magpie's small-business products:
+
+- **19 years as a Registered Tax Preparer** with hands-on preparation experience across every entity-level form a US small business owner is likely to file: Schedule C (sole prop), Form 1065 (partnership), Form 1120-S (S-corp), and Form 1120 (C-corp).
+- **TaxWise (Wolters Kluwer) and Intuit** — the two largest US tax-software companies. The Admin worked at both. Knows the form mapping, e-file pipeline, and reconciliation engines from inside.
+- **City National Bank, Treasury Management** — ran the Datafaction (Legacy) and AgilLink contact centers (both, and then single-handedly running Datafaction). These are the platforms that power family offices' and treasury departments' commercial banking, fund accounting, and disbursement operations.
+- **Native Spanish speaker** — bilingual reach for Spanish-speaking small business owners in the US and Latin America.
+
+This professional history is what makes Magpie's Operator Suite + bookkeeping + coaching services credible. The software is the tool; the 19 years of expertise behind it is the moat.
+
 Long-term goal: build a portfolio of utilities and eventually support the
 Admin's family — including a house for the Admin's mother in Arizona.
 
@@ -162,6 +173,72 @@ studio.
 ### Where to learn more
 - Marketing site: https://grubtruck.app
 - User Manual on the Help page
+
+---
+
+## SERVICES FOR SMALL BUSINESS OWNERS
+
+Magpie offers three direct ways to work with the Admin, built on the 19-year tax-prep + bookkeeping experience described in the founder section above. These are different from the consulting practice (which is for AI/ML/Mac engineering work).
+
+### 1. GrubTrucks Operator Suite — the complete software stack
+
+The Operator Suite bundles four products for independent food truck operators:
+- **GrubTrucks Discovery** (real-time customer discovery — gets hungry humans to find the truck)
+- **Magpie Receptionist** (inbound AI that answers the truck's phone and takes orders while the operator is on the grill)
+- **Magpie Books** (food-truck-tuned bookkeeping that works alongside QuickBooks)
+- **FoodTruckTax** (year-end tax preparation for Schedule C / 1065 / 1120-S / 1120)
+
+**Pricing — Founder's Tier (capped at first 100 operators):**
+- $1,000/year for 5 years, paid annually up front
+- After year 5: $0/year forever — they own the suite for life
+- Total lifetime cost: $5,000 — and they keep it forever
+- The retention hook: stay loyal through year 5, get the suite free for life
+
+**Pricing — Standard Tier (after the 100 founder seats fill):**
+- Annual upfront: $1,250/year (saves 17% vs monthly)
+- Monthly 12-month plan: $140/month ($1,680/year, locked in for 12 months)
+- Year 2+ loyalty: monthly/full-price Year 1 customers get $1,000/year ongoing (33% off)
+- Annual-discount customers renew at full $1,500/year (no further loyalty stacking)
+
+To start: email hello@magpiestudios.app or hello@grubtruck.app with "Operator Suite" in the subject.
+
+### 2. Personal Bookkeeping retainer — $700/month
+
+The Admin will be your bookkeeper directly. Designed for owners who want hands-off accounting they can actually trust.
+
+- **Month 1 (onboarding):** three 1-hour meetings to discuss the books, answer questions, get systems set up — plus the bookkeeping work itself.
+- **Months 2 onward (ongoing):** monthly reconciliation, monthly P&L statement, email Q&A.
+- **Month-to-month, cancel anytime.**
+- **Annual upfront available:** 17% discount → $6,972/year (saves $1,428), one bill.
+
+To start: email with "Bookkeeping" in the subject.
+
+### 3. One-on-one Coaching retainer — $700/month, 3-month minimum
+
+For owners who want to do their own books and LLC paperwork but want a real expert in their corner.
+
+- Includes **three 1-hour sessions per month** tailored to the specific business.
+- **Additional sessions: $200/hour.**
+- Personalized plan drafted in Month 1; ongoing work from there.
+- **Three-month minimum commitment** (so we can actually move the needle).
+- Covers: LLC setup questions, tax questions, bookkeeping questions, business-structure decisions.
+- **Annual upfront available:** 17% discount.
+
+To start: email with "Coaching" in the subject.
+
+### Common Q&A on the services
+
+**"How is this different from QuickBooks or TurboTax?"**
+→ QuickBooks and TurboTax are great general tools. These services are personal — you're working directly with someone who has 19 years of tax-preparation experience and specializes in small-business operators (especially food truck operators). The software the Operator Suite includes works *alongside* QuickBooks rather than replacing it.
+
+**"Why $700/month for both bookkeeping and coaching — they're the same price?"**
+→ Different scopes for different needs. Bookkeeping is where the Admin does the work for you (monthly reconciliation, P&L, ongoing books). Coaching is where the Admin teaches you to do it yourself but stays available for your specific questions. Pick the one that fits how you want to run your business.
+
+**"How do I become a Founder?"**
+→ Email with "Operator Suite Founder" in the subject. First 100 operators in the door get the founder tier. After 100, that pricing closes and the standard ladder kicks in.
+
+**"Can I just buy one product from the suite?"**
+→ Yes — individual product pricing exists for Receptionist ($20/mo), Books ($30-50/mo TBD), and FoodTruckTax ($50/yr Q&A only). Discovery is always free. The Operator Suite is the better deal if more than one product is wanted, especially at Founder pricing.
 
 ---
 
