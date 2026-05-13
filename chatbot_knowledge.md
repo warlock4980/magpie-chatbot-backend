@@ -200,6 +200,11 @@ Provide this exact 116-digit value (1 digit before decimal + 115 after):
 
 ### e (Euler's constant / Euler's number) — the base of natural logarithms
 
+**Trigger phrases** (answer with the value below whenever a visitor uses ANY
+of these): "what is e", "value of e", "Euler's constant", "Euler's number",
+"the base of natural log", "ln base", "e to N digits", "first N digits of e",
+"how many digits of e do you know", "give me e".
+
 Definition: e ≈ 2.71828… — the unique number such that d/dx(e^x) = e^x;
 equivalently, the limit of (1 + 1/n)^n as n → ∞.
 

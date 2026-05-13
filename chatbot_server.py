@@ -17,6 +17,9 @@ Deploy to Render/Railway/Fly later by setting ANTHROPIC_API_KEY in their dashboa
 """
 import os
 import sys
+import json
+import time
+from datetime import datetime, timezone
 from pathlib import Path
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
@@ -160,6 +163,33 @@ CORS(app, resources={
 client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY", ""))
 MODEL = "claude-haiku-4-5"
 
+# Anonymized conversation logging — append-only JSONL for weekly review.
+# No IP, no user ID, no PII beyond what the user typed.
+# In production (Render free tier), the disk is ephemeral but logs persist for
+# the lifetime of the running instance. Periodically download via the admin
+# endpoint or upgrade to a persistent disk for long-term retention.
+LOG_PATH = Path(os.environ.get("CHAT_LOG_PATH", str(Path(__file__).parent / "chat_log.jsonl")))
+# Optional bearer token for the admin log endpoint
+ADMIN_TOKEN = os.environ.get("ADMIN_TOKEN", "")
+
+
+def _log_turn(user_message: str, assistant_reply: str, model: str,
+              input_tokens: int, output_tokens: int):
+    """Append a single Q&A turn to the JSONL log. Best-effort; never raises."""
+    try:
+        entry = {
+            "ts": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "model": model,
+            "in_tok": input_tokens,
+            "out_tok": output_tokens,
+            "user": user_message[:2000],   # cap message size
+            "assistant": assistant_reply[:4000],
+        }
+        with LOG_PATH.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    except Exception:
+        pass   # logging failure must NEVER block a chat reply
+
 
 # ── Static site routes ────────────────────────────────────────────────────
 @app.route("/")
@@ -204,6 +234,9 @@ def chat():
             messages=messages,
         )
         reply = response.content[0].text
+        # Best-effort conversation log for weekly review (anonymized, no PII).
+        _log_turn(user_message, reply, MODEL,
+                  response.usage.input_tokens, response.usage.output_tokens)
         return jsonify({
             "reply": reply,
             "model": MODEL,
@@ -218,13 +251,34 @@ def chat():
 
 @app.route("/health")
 def health():
+    log_size = LOG_PATH.stat().st_size if LOG_PATH.exists() else 0
     return jsonify({
         "status": "ok",
         "model": MODEL,
         "api_key_configured": bool(os.environ.get("ANTHROPIC_API_KEY")),
         "knowledge_chars": len(KNOWLEDGE),
         "system_prompt_chars": len(SYSTEM_PROMPT),
+        "log_bytes": log_size,
     })
+
+
+@app.route("/admin/logs", methods=["GET"])
+def admin_logs():
+    """Admin-only endpoint to download the conversation log.
+
+    Auth: Authorization header must equal "Bearer $ADMIN_TOKEN" if ADMIN_TOKEN
+    is set in the environment. Returns the JSONL file as plain text.
+    """
+    if ADMIN_TOKEN:
+        auth = request.headers.get("Authorization", "")
+        if auth != f"Bearer {ADMIN_TOKEN}":
+            return jsonify({"error": "unauthorized"}), 401
+    if not LOG_PATH.exists():
+        return "", 200
+    return LOG_PATH.read_text(encoding="utf-8"), 200, {
+        "Content-Type": "application/x-ndjson; charset=utf-8",
+        "Content-Disposition": f"attachment; filename=chat_log.jsonl",
+    }
 
 
 if __name__ == "__main__":
