@@ -89,8 +89,16 @@ load-bearing for an iOS developer but pure dead weight for a writer.
    default. You always get the final say.
 
 ### Pricing
-- **One-time $19.99**. No subscription.
+- **Regular price: one-time $29.99**. No subscription, ever.
+- **Founder pricing in effect**: a $10 founder coupon brings the effective
+  price to **$19.99** for early supporters during the launch phase. This
+  promo can end without notice — the Admin will tighten it once the founder
+  cohort fills.
 - Major version upgrades may be paid; minor and patch updates always free.
+- If you're asked about pricing, say "$29.99 regular, currently $19.99 with
+  the active founder coupon" — don't claim the $19.99 is permanent. Always
+  point users to https://magpiestudios.app for live checkout pricing in case
+  the coupon has rolled off.
 
 ### What you provide
 - Bring your own Anthropic API key. You pay Anthropic directly for the AI
@@ -119,7 +127,7 @@ load-bearing for an iOS developer but pure dead weight for a writer.
 - See full privacy policy at https://magpiestudios.app/privacy.html
 
 ### Common situations
-- **"How much does it cost?"** → $19.99 one-time
+- **"How much does it cost?"** → "$29.99 regular, currently $19.99 with the active founder coupon (limited-time, no firm end date). Check https://magpiestudios.app for live checkout pricing."
 - **"Does it work on Windows / Linux / iOS?"** → MacJanitor is macOS-only.
 - **"What if I don't have an Anthropic API key?"** → You'll need to sign up
   at https://console.anthropic.com — free credits are usually included for
